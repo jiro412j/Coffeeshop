@@ -36,7 +36,7 @@
       font-size: small;
       color: white;
       padding: 0.8em 0.7em 0 0.7em;
-      background-color: #607D8B;
+      background-color: #03A9F4;
       line-height: 1em;
       position: relative;
       left: -1px;
@@ -50,3 +50,36 @@ ul
 {
     list-style-type: none;
 }
+
+.btn-add {
+    display: block;
+    padding: 10px;
+    background: #2ecc71;
+    color: #fff;
+}
+
+.btn-add:hover {
+    display: block;
+    padding: 10px;
+    background: #27ae60;
+    color: #fff;
+}
+
+.btn-checkout {
+    display: block;
+    padding: 10px;
+    background: #f1c40f;
+    color: #fff;
+}
+
+.btn-checkout:hover {
+    display: block;
+    padding: 10px;
+    background: #f39c12;
+    color: #fff;
+}
+
+.img-custom {
+    max-width: 300px;
+}
+

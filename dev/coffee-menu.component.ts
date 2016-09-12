@@ -1,4 +1,4 @@
-import {Component, Injectable} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {Coffee} from './coffee';
 
 @Component ({
@@ -7,7 +7,7 @@ import {Coffee} from './coffee';
     styleUrls: ['dev/coffee-menu.component.css'],
 })
 
-@Injectable()
+
 export class CoffeeMenuComponent {
     coffee = COFFEE;
     selectedCoffee = Coffee;
@@ -34,6 +34,11 @@ export class CoffeeMenuComponent {
         this.orderPrice = this.orderPrice - item.price;
         this.orderNumber = this.orderNumber - 1;
         alert(item.name + ' was removed');
+    }
+
+    checkOutOrder() {
+        if(alert('Thank you for your purchased.')){}
+        else    window.location.reload(); 
     }
 
 }
