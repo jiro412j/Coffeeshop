@@ -12,8 +12,8 @@ export class CoffeeMenuComponent {
     coffee = COFFEE;
     selectedCoffee = Coffee;
     
-    onSelect(coffee: Coffee): void {
-    this.selectedCoffee = coffee;
+    onSelect(Coffee) {
+    this.selectedCoffee = Coffee;
 
   } 
     recentCoffee = 'None';
