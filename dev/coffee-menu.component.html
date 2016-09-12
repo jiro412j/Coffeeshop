@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+        <ul class="coffee">
+            <h2>Menu</h2>
+            <li *ngFor="#coffee of coffee"
+                [class.selected]="coffee === selectedCoffee"
+                (click)="onSelect(coffee)">
+                <span class="badge">{{coffee.price}} Baht</span> {{coffee.name}} 
+            </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <div *ngIf="selectedCoffee" class="overflow:hidden">
+                <h2>{{selectedCoffee.name}}</h2>
+                <div><label>Price: </label>{{selectedCoffee.price}} Baht</div>
+                <div>
+                    <img src="{{selectedCoffee.image}}" alt="" class="img-responsive">
+                    <br>
+                    <button (click)="addOrder(selectedCoffee)" class="btn btn-primary">Add Order</button>
+                </div>
+                <h5>Recently added : {{recentCoffee}}</h5>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2>Order</h2>
+            <h5><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                You have {{orderNumber}} orders
+            </h5>
+            <h5>Total Price : {{orderPrice}} Baht</h5>
+            <ul class="coffee">
+                <li *ngFor="#item of order">
+                    <button (click)="removeOrder(item)" class="btn btn-warning">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                    <span> {{item.name}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
