@@ -25,7 +25,7 @@ export class CoffeeMenuComponent {
         this.order.push(selectedCoffee);
         this.orderNumber = this.orderNumber + 1;
         this.orderPrice = this.orderPrice + selectedCoffee.price;
-        alert(selectedCoffee.name + 'was added');
+        alert(selectedCoffee.name +' ' + 'was added');
     }
 
     removeOrder(item) {
